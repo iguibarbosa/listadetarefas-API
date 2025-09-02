@@ -41,9 +41,13 @@ A aplicação foi organizada em três módulos independentes, que se comunicam p
 ### Passos
 ```bash
 # Clone este repositório
-git clone https://github.com/RafaelSilvaGomes/lista-tarefas-api.git
+git clone https://github.com/iguibarbosa/listadetarefas-API.git
 
 # Abra o projeto em sua IDE (IntelliJ, VS Code, Eclipse, etc.)
 
 # Execute a classe principal
 ListaTarefasApiApplication.java
+```
+## Autor
+
+**Guilherme Barbosa**
