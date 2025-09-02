@@ -1,72 +1,49 @@
-<h1 align="center">Lista de Tarefas - API REST</h1>
-<p align="center">API RESTful para um sistema de gerenciamento de tarefas (To-Do List), desenvolvida com Spring Boot.</p>
+# ⚙️ Lista de Tarefas – API Backend
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-21-blue?style=for-the-badge&logo=java" alt="Java 21">
-  <img src="https://img.shields.io/badge/Spring_Boot-3-success?style=for-the-badge&logo=spring" alt="Spring Boot 3">
-  <img src="https://img.shields.io/badge/Maven-4-red?style=for-the-badge&logo=apache-maven" alt="Maven">
-  <img src="https://img.shields.io/badge/PostgreSQL-16-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL">
-</p>
+Este repositório implementa a **API REST** responsável por centralizar as regras de negócio e o gerenciamento de dados do sistema de **Lista de Tarefas**.  
+Ela funciona como o "coração" da aplicação full-stack, sendo consumida por dois clientes distintos:  
 
-<details>
-  <summary><strong>📝 Sobre o Projeto</strong></summary>
-  <br>
-  Esta API foi criada para servir como o backend da aplicação "Lista de Tarefas". Ela gerencia todas as operações de CRUD (Criar, Ler, Atualizar e Deletar) para as tarefas, utilizando uma arquitetura RESTful.
+- 🌐 **Interface Web** desenvolvida em Angular  
+- 💻 **Aplicação Desktop** criada em JavaFX  
 
-  O projeto foi desenvolvido seguindo o tutorial "Projeto Aplicação Full Stack" do professor Ricardo Tec.
-</details>
+---
 
-## 🏛️ Arquitetura da Solução
+## 🏗️ Estrutura da Solução
 
-Este projeto corresponde à API (Backend) da aplicação "Lista de Tarefas". A solução completa é modularizada em três repositórios independentes para garantir a separação de responsabilidades.
+A aplicação foi organizada em três módulos independentes, que se comunicam por meio de endpoints REST. Essa separação permite maior flexibilidade e manutenibilidade.
 
-* **Backend (Este Repositório):** API RESTful desenvolvida com Spring Boot que serve como o núcleo da aplicação.
-* **Frontend (Web):** Interface web desenvolvida com Angular.
-    * ➡️ **Link para o repositório:** `https://github.com/ZagoGiovanni/Projeto-Java-Spring-Web`
-* **Desktop:** Aplicação de desktop (a ser desenvolvida).
-    * ➡️ **Link para o repositório:** `https://github.com/ZagoGiovanni/Projeto-Java-Spring-Desktop`
+1. **Backend (este projeto)**  
+   - Desenvolvido em **Java + Spring Boot**  
+   - Implementa operações **CRUD** (Criar, Ler, Atualizar, Excluir)  
+   - Utiliza **H2 Database** em memória para simplificar o desenvolvimento  
 
-## 💻 Tecnologias Utilizadas
+2. **Frontend Web**  
+   - Construído com **Angular**  
+   - 🔗 [lista-tarefas-web](https://github.com/iguibarbosa/listadetarefas-WEB)
 
-* **Linguagem:** Java 21
-* **Framework:** Spring Boot 3
-* **Banco de Dados:**
-    * H2 (Ambiente de Desenvolvimento)
-    * PostgreSQL (Ambiente de Produção)
-* **Gerenciamento de Dependências:** Maven
-* **Mapeamento Objeto-Relacional:** Spring Data JPA / Hibernate
+---
 
-## 🚀 Como Executar o Projeto
+## 🚀 Tecnologias
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/ZagoGiovanni/Projeto-Java-Spring-API.git]
-    ```
+- Java 21  
+- Spring Boot 3  
+- Spring Data JPA  
+- Maven  
+- H2 Database  
 
-2.  **Navegue até a pasta do projeto:**
-    ```bash
-    cd lista-tarefas-api
-    ```
+---
 
-3.  **Configure o banco de dados** no arquivo `src/main/resources/application.properties`.
+## ▶️ Executando o projeto
 
-4.  **Execute a aplicação:**
-    ```bash
-    mvn spring-boot:run
-    ```
+### Pré-requisitos
+- Ter instalado o **JDK 21**
 
-5.  A API estará disponível em `http://localhost:8080`.
+### Passos
+```bash
+# Clone este repositório
+git clone https://github.com/RafaelSilvaGomes/lista-tarefas-api.git
 
-## Endpoints Principais
+# Abra o projeto em sua IDE (IntelliJ, VS Code, Eclipse, etc.)
 
-* `GET /api/tarefas` - Lista todas as tarefas.
-* `POST /api/tarefas` - Cria uma nova tarefa.
-* `PUT /api/tarefas/{id}` - Atualiza uma tarefa existente.
-* `DELETE /api/tarefas/{id}` - Remove uma tarefa.
-
-## Autor
-
-**Giovanni dos Santos Zago**
-
-- LinkedIn: `https://www.linkedin.com/in/giovanni-zago-058891290/`
-- GitHub: `https://github.com/ZagoGiovanni`
+# Execute a classe principal
+ListaTarefasApiApplication.java
